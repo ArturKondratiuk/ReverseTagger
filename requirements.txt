@@ -1,0 +1,19 @@
+# ReverseTagger runtime dependencies (Python 3.10)
+# PyTorch is installed separately from the official CUDA 13.0 index by run.bat.
+# Keep this file limited to packages imported directly by the application/JoyTag.
+gradio==6.27.0
+gradio-client==2.7.0
+fastapi==0.141.1
+starlette==1.6.0
+uvicorn==0.52.0
+jinja2==3.1.6
+pillow
+numpy
+pyyaml
+safetensors
+transformers
+einops
+
+opencv-python==4.10.0.84
+
+huggingface_hub
