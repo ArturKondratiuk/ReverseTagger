@@ -33,14 +33,6 @@ Rules are applied after JoyTag detection and semantic routing. They can:
 
 Rules are user configuration, not a built-in vocabulary or automatic tag list.
 
-## JoyTag vocabulary and character names
-
-JoyTag's model output is fixed by the model checkpoint. Its downloaded `labels.txt` maps output indices to names. Editing that file alone does **not** teach JoyTag a new concept and does not add a new model output.
-
-For example, adding `9S` to `labels.txt` would only rename an existing output index (and could make the mapping incorrect); it would not make the model detect 9S. A character absent from the JoyTag checkpoint requires a separate recognition model or another source of image evidence.
-
-`config/semantic_tags.yaml` is routing metadata for the vocabulary used by this project. It contains each snapshot label exactly once. Unknown labels from a newer JoyTag vocabulary are still preserved by the semantic layer and fall back to the third prompt line until the routing table is updated.
-
 ## Model files
 
 The official JoyTag files are downloaded on first run into `models/joytag/`. Model weights are not included in the repository.
