@@ -263,4 +263,9 @@ def find_free_port(start=7860, end=7960):
 if __name__ == "__main__":
     port = find_free_port()
     print(f"Starting ReverseTagger on http://127.0.0.1:{port}")
-    demo.launch(server_name="127.0.0.1", server_port=port, **_LAUNCH_KWARGS)
+    demo.launch(
+        server_name="127.0.0.1",
+        server_port=port,
+        inbrowser=True,
+        **_LAUNCH_KWARGS,
+    )
